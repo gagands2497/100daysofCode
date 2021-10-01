@@ -17,6 +17,9 @@ void N_queen(vector<int> &col, vector<int> &diag1, vector<int> &diag2, int y, in
     if (y == n)
     {
         ans++;
+        //you can also process the more information here
+        //like take an row array 
+        //ans where row and columns are true output the solution matrix
         return;
     }
     for (int x = 0; x < n; x++)
