@@ -16,13 +16,12 @@ void FIO()
 #endif
 }
 
-
-
 int main()
 {
     FIO();
     int i;
-    REP(i,0,10){
+    REP(i, 0, 10)
+    {
         cout << i << "";
     }
 }
