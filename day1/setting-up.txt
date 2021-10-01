@@ -1,0 +1,43 @@
+Step1 : setting up the VS code for c++
+Link for setup guide https://code.visualstudio.com/docs/cpp/config-mingw
+
+Step 2: setting up the c++ template for solving problems
+
+Details :
+1.) Import bits/stdc++.h using #import<bits/stdc++.h>.
+2.) Make input and output file to take input and send output via input and output stream resp.
+3.) Make an FIO function :-
+    a.) ios::sync_with_stdio(0),cin.tie(0) add these two statements to make INPUT/OUTPUT fast.
+    b.) freopen("../input.txt", "r", stdin) add this statement to change input stream to input file.
+        Now the input will taken from the input.txt file.
+    c.) freopen("../output.txt", "w", stdout) to change the output stream towards output.txt file.
+
+
+
+Step 3 :
+
+Making the code shorter by using c++ macros and Type names.
+    Type Names The command typedef can be used to give a short name to a data type.
+    For example, the name long long is long, so we can define a short name ll as follows:
+        typedef long long ll;
+        typedef vector<int>vi; 
+        typedef pair<int,int>pi;
+    Macros are the Another way to shorten code is to define macros.
+    A macro specifies that certain strings in the code will be changed before the compilation.
+    In C++, macros are defined using the #define keyword.
+    For example, we can define the following macros:
+        #define F first 
+        #define S second 
+        #define PB push_back 
+        #define MP make_pair
+        #define REP(i,a,b) for (int i=a;i<=b;i++)
+
+    After this, the code
+        for (int i = 1; i <= n; i++) { 
+            search(i);
+        } can be shortened as follows:
+        REP(i,1,n) { 
+            search(i);
+        }
+
+    
