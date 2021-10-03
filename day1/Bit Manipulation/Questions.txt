@@ -1,0 +1,8 @@
+Bitmanipulation Questions
+
+Question : Set the ith bit of a number to 1 (set bit).
+Question : Check whether the ith bit is set or not in a number?
+Question : unset the ith bit of a number?
+Question : To calculate the power of two?
+Question : Given an integer n output yes if the n is power of 2 else false
+in O(1) time complexity?
