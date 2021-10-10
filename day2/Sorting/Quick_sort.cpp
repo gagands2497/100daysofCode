@@ -12,24 +12,25 @@ void FIO()
 
 int getPivot(int *input, int *temp, int start, int end)
 {
-  int a = input[0];
-  int ans = 0;
-
+  int ans = start;
+  int a = input[start];
   for (int i = start; i <= end; i++)
   {
     if (input[i] < a)
     {
-      temp[start + ans++] = input[i];
+      temp[ans++] = input[i];
     }
   }
-  int k = ans;
+  int k = ans + 1;
+  temp[ans] = a;
   for (int i = start; i <= end; i++)
   {
     if (input[i] >= a)
     {
-      temp[start + k++] = input[i];
+      temp[k++] = input[i];
     }
   }
+
   for (int i = start; i <= end; i++)
   {
     input[i] = temp[i];
@@ -39,12 +40,11 @@ int getPivot(int *input, int *temp, int start, int end)
 
 void sort(int *input, int *temp, int start, int end)
 {
-
   if (start < end)
   {
-    int pivot = getPivot(input, temp, start, end);
-    sort(input, temp, start, pivot);
-    sort(input, temp, pivot + 1, end);
+    int p = getPivot(input, temp, start, end);
+    sort(input, temp, start, p - 1);
+    sort(input, temp, p + 1, end);
   }
 }
 
