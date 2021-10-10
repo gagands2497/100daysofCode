@@ -11,7 +11,7 @@ void FIO()
 
 void merger(int *input,int *temp,int start,int end){
   int mid = (start + end)/2;
-
+  
   int i = start,j = mid + 1,k  = start;
   while(i<=mid && j<=end){
     if(input[i] < input[j]){
